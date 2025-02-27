@@ -1,9 +1,10 @@
+import numpy as np
 import math
 import torch
 import torch.nn.functional as F
 import torchvision
 import matplotlib
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import time
 from unet import Unet
@@ -186,6 +187,7 @@ for epoch in range(epochs):
 print(f"learning time is {time.time() - start_time} (s)")
 
 # lossのグラフ
+epoch = np.arange(epochs).tolist()
 plt.plot(losses)
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
