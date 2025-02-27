@@ -135,7 +135,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"device: {device}を使用しています")
 
 preprocess = transforms.ToTensor()
-dataset = LineDatasets("line_data_56_56", preprocess)
+dataset = LineDatasets(r"D:\pic_dataset/test_line_data", preprocess)
 dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
 # diffuser = Diffuser(num_timesteps, device=device)
